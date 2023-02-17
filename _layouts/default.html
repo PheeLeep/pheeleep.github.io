@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta charset='utf-8'>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="stylesheet" href="../assets/styles.css">
-    </head>
-    <body>
-        <div id="main_content_wrap" class="outer">
-            <section id="main_content" class="inner">
-              {{ content }}
-            </section>
-          </div>
-    </body>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../assets/styles.css">
+    <link rel="stylesheet" href="../assets/fontschema.css">
+</head>
+
+<body>
+    <div id="main_content_wrap" class="outer">
+        <div class="mainpage_logo">
+            <h1>PheeLeep</h1>
+        </div>
+        <div class="topnav" id="myTopnav">
+            <a href="javascript:void(0);" class="icon" onclick="dropDown()">&#9776;</a>
+            <a href="./index.html" class="active">HOME</a>
+            <a href="./projects.html">PROJECTS</a>
+            <a href="./about.html">ABOUT</a>
+        </div>
+        <section id="main_content" class="inner">
+            {{ content }}
+        </section>
+    </div>
+</body>
+
 </html>
