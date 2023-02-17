@@ -1,0 +1,42 @@
+.about_headingone{
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.about_headingtwo{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.about_headingthree{
+    text-align: center;
+    color: white;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.general_paragraph {
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: center;
+    color: white;
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.secondary_paragraph {
+    text-align: center;
+    color: white;
+    font-size: 17px;
+    margin-top: -15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
