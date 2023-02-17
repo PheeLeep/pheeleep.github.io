@@ -7,15 +7,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="../assets/styles.css">
     <link rel="stylesheet" href="../assets/fontschema.css">
+    <title> {{ site.title | default: site.github.repository_name }} </title>
 </head>
 
 <body>
+    <!-- Load Script first. -->
+    <script type="text/javascript">
+        window.onload = function () {
+            function dropDown() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+            document.getElementById('dropDownBtn').onclick = dropDown;
+        }
+    </script>
     <div id="main_content_wrap" class="outer">
         <div class="mainpage_logo">
             <h1>PheeLeep</h1>
         </div>
         <div class="topnav" id="myTopnav">
-            <a href="javascript:void(0);" class="icon" onclick="dropDown()">&#9776;</a>
+            <a href="javascript:void(0);" id="dropDownBtn" class="icon">&#9776;</a>
             <a href="./index.html" class="active">HOME</a>
             <a href="./projects.html">PROJECTS</a>
             <a href="./about.html">ABOUT</a>
