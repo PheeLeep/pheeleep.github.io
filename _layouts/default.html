@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="../assets/styles.css">
     <link rel="stylesheet" href="../assets/fontschema.css">
-    <title> {{ site.title }} </title>
+    <title>{{ page.title }}</title>
 </head>
 
 <body>
@@ -35,9 +35,11 @@
             <a href="./projects.html">PROJECTS</a>
             <a href="./about.html">ABOUT</a>
         </div>
-        <section id="main_content" class="inner">
-            {{ content }}
-        </section>
+        <main>
+            <section id="main_content" class="inner">
+                {{ content }}
+            </section>
+        </main>
     </div>
 </body>
 
