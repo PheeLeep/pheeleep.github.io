@@ -19,7 +19,6 @@
 }
 
 .endcred {
-  color: #f2f2f2;
   text-align: center;
   font-size: 15px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -30,9 +29,15 @@
 /* Main */
 body {
   margin: 0px;
+  color: #f2f2f2;
   background-color: rgb(41, 41, 41);
+  text-align: center;
 }
 
+main {
+  margin-left: 10px;
+  margin-right: 10px;
+}
 /* End of Main */
 
 .tableproducts {

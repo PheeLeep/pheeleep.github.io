@@ -27,13 +27,14 @@
     </script>
     <div id="main_content_wrap" class="outer">
         <div class="mainpage_logo">
-            <h1>PheeLeep</h1>
+            <h1 class=".about_headingone">PheeLeep</h1>
         </div>
         <div class="topnav" id="myTopnav">
             <a href="javascript:void(0);" id="dropDownBtn" class="icon">&#9776;</a>
-            <a href="./index.html" class="active">HOME</a>
-            <a href="./projects.html">PROJECTS</a>
-            <a href="./about.html">ABOUT</a>
+            <a class="{% if page.url == '/' %}active{% endif %}" href="{{ site.baseurl }}/index.html">HOME</a>
+            <a class="{% if page.url == '/docs/projects.html' %}active{% endif %}" href="{{ site.baseurl }}/docs/projects.html">PROJECTS</a>
+            <a class="{% if page.url == '/docs/blogs.html' %}active{% endif %}" href="{{ site.baseurl }}/docs/blogs.html">BLOGS</a>
+            <a class="{% if page.url == '/docs/about.html' %}active{% endif %}" href="{{ site.baseurl }}/docs/about.html">ABOUT</a>
         </div>
         <main>
             <section id="main_content" class="inner">
