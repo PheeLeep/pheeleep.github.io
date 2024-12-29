@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Projects - PheeLeep</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body class="is-preload">
+    <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-out',
+            once: true
+        });
+    </script>
+    <!-- Header -->
+    <div id="header">
+
+        <div class="top">
+
+            <!-- Logo -->
+            <div id="logo">
+                <span class="image avatar48"><img src="https://github.com/PheeLeep.png" alt="" /></span>
+                <h1 id="title">PheeLeep</h1>
+            </div>
+
+            <!-- Nav -->
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html#top" id="top-link"><span class="icon solid fa-home">Introduction</span></a>
+                    </li>
+                    <li><a href="index.html#about" id="about-link"><span class="icon solid fa-user">About Me</span></a>
+                    </li>
+                    <li><a href="index.html#skills" id="skills-link"><span class="icon solid fa-cogs">Skills and
+                                Experiences</span></a></li>
+                    <li><a href="index.html#education" id="educ-link"><span
+                                class="icon solid fa-graduation-cap">Educational Background</span></a></li>
+
+                    <li><a href="index.html#awards" id="awards-link"><span class="icon solid fa-trophy">Awards and
+                                Certificates</span></a></li>
+                    <li><a href="index.html#portfolio" id="portfolio-link"><span
+                                class="icon solid fa-briefcase">Projects</span></a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </div>
+
+    <!-- Main -->
+    <div id="main">
+
+        <section id="portfolio" class="two timeline-section">
+            <div class="container" data-aos="fade-left">
+                <header>
+                    <h2>Projects</h2>
+
+                    <p class="info-list">
+                        <span id="personalSpan"><i class="fas fa-user" style="margin-right: 5px;"></i>%aw</span>
+                        <span id="projectSpan"><i class="fas fa-project-diagram"
+                                style="margin-right: 5px;"></i>%cert</span>
+                    </p>
+                    <p>Click any project to redirect to its own repository.</p>
+                </header>
+
+                <!-- Sort Combobox -->
+                <!-- Sort Combobox -->
+                <div class="portfolio-controls">
+                    <label for="sort">Sort By:</label>
+                    <select id="sort" class="sort-combobox">
+                        <option value="all">All</option>
+                        <option value="Personal">Personal</option>
+                        <option value="Project">Project</option>
+                    </select>
+                </div>
+
+
+                <div class="portfolio-timeline"></div>
+            </div>
+        </section>
+
+
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+
+        <!-- Copyright -->
+        <ul class="copyright">
+            <li>&copy; PheeLeep. All rights reserved.</li>
+            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/timelineawards.js"></script>
+    <script src="assets/js/portfolios.js"></script>
+    <script src="assets/js/skillsgithub.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const sortSelect = document.getElementById('sort');
+            sortSelect.addEventListener('change', () => {
+                const selectedType = sortSelect.value;
+                const portfolioContainer = document.querySelector('.portfolio-timeline');
+                portfolioContainer.innerHTML = ''; 
+
+                generatePortfolio('.portfolio-timeline', selectedType);
+            });
+            generatePortfolio('.portfolio-timeline', 'all');
+            const personalSpan = document.getElementById('personalSpan');
+            const projectSpan = document.getElementById('projectSpan');
+
+            const personal = getCount('Personal');
+            const projects = getCount('Project');
+
+            personalSpan.innerHTML = personalSpan.innerHTML.replace('%aw', personal + " Personal Project/s");
+            projectSpan.innerHTML = projectSpan.innerHTML.replace('%cert', projects + " School and Commission-related");
+        });
+    </script>
+</body>
+
+</html>
